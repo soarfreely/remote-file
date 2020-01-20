@@ -19,17 +19,17 @@ class Test
         $config =  [
             'host'          => '127.0.0.1',
             'port'          => 22,
-            'username'      => 'soar',
-            'password'      => 'udng',
+            'username'      => 'user',
+            'password'      => 'pass',
             'privateKey'    => '',
-            'root'          => '/home/soar/sftp/JDDJ',
+            'root'          => '/sftp',
             'timeout'       => 10,
             'directoryPerm' => 0755
         ];
 
         $filenames = [
-            'imp_api_dj_prd_brand_bj_coupon_finish_2019-12-31.txt',
-            'imp_api_dj_prd_brand_bj_coupon_finish_2019-12-30.txt',
+            'sftp_demo_2020-12-31.txt',
+            'sftp_demo_2020-12-30.txt',
         ];
 
         $client = null;
@@ -45,7 +45,7 @@ class Test
             echo PHP_EOL;
 
             // 获取指定文件句柄
-            $handle = $client->getFileHandle('imp_api_dj_prd_brand_bj_coupon_2019-12-09.txt');
+            $handle = $client->getFileHandle('sftp_demo_2010-01-01.txt');
             print_r($handle);
             echo PHP_EOL;
         } catch (RemoteFileException $e) {
@@ -67,3 +67,27 @@ class Test
 
 $test = new Test();
 $test->index();
+
+// 上述代码输出如下
+/*
+    Array
+    (
+        [0] => Resource id #40
+        [1] => Resource id #41
+    )
+
+    Resource id #42
+    Array
+    (
+        [0] => 22302bb8e6ffa8d
+        [1] => AYAM0017860607
+        [2] => 122PPG1906_br_舒肤佳
+        [3] => 109417642
+        [4] => 122PPG1906_br_舒肤佳
+        [5] => 20
+        [6] => 69
+        [7] =>
+        [8] => 2019-12-09
+    )
+*/
+
