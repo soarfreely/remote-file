@@ -1,0 +1,32 @@
+{
+    "name": "soarfreely/remote-file",
+    "description": "remote file",
+    "keywords": [
+        "sftp",
+        "remote file",
+        "filesystem",
+        "file system"
+    ],
+    "type": "library",
+    "require-dev": {
+        "league/flysystem-sftp": "^1.0",
+        "ext-json": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "soar freely",
+            "email": "soarfreely.z@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "league/flysystem-sftp": "^1.0",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Soarfreely\\RemoteFile\\": "src/"
+        }
+    }
+}
